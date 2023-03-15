@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: efe8946dee98fd5429fce2c20e684a33
+labels:
+- Code
+- Editor
+- C#
+- Extension
+- Source
+- AssetPrefs
+timeCreated: 1447500926
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

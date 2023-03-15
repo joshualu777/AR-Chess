@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: ba41c25818898104ea84975e4166e213
+labels:
+- Code
+- Editor
+- Extension
+- EditorExtension
+- C#
+- EditorWindow
+- Source
+- Grid
+- Snap
+- Rotation
+- PixelsPerUnit
+- RotationSnap
+- SnapToGrid
+timeCreated: 1426441145
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
