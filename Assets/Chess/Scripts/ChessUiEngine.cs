@@ -24,22 +24,26 @@ public class ChessUiEngine : MonoBehaviour {
 		for (int i = 0; i < 8; i++) {
 			Transform piece = GameObject.Instantiate (whitePiecePrefabs [(int)setup [i]]);
 			Vector3 worldPoint = ToWorldPoint (i);
-			piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
+			piece.position = worldPoint;
+			//piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
 		}
 		for (int i = 0; i < 8; i++) {
 			Transform piece = GameObject.Instantiate (blackPiecePrefabs [(int)setup [i]]);
 			Vector3 worldPoint = ToWorldPoint (i+56);
-			piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
+            piece.position = worldPoint;
+            //piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
 		}
 		for (int i = 0; i < 8; i++) {
 			Transform piece = GameObject.Instantiate (whitePiecePrefabs [(int)Piece.Pawn]);
 			Vector3 worldPoint = ToWorldPoint (i+8);
-			piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
+            piece.position = worldPoint;
+            //piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
 		}
 		for (int i = 0; i < 8; i++) {
 			Transform piece = GameObject.Instantiate (blackPiecePrefabs [(int)Piece.Pawn]);
 			Vector3 worldPoint = ToWorldPoint (i+48);
-			piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
+            piece.position = worldPoint;
+            //piece.position = new Vector3(worldPoint.x, piece.position.y, worldPoint.z);	
 		}
 	}
 
