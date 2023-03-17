@@ -41,7 +41,13 @@ public class Pawn : ChessFigure
                 }
                 if (CurrentR == 4) //en passant
                 {
-                    
+                    int p_r = BoardManager.Instance.powerR;
+                    int p_c = BoardManager.Instance.powerC;
+                    if (p_r == CurrentR && p_c == CurrentC + 1)
+                    {
+                        result[CurrentR + 1, CurrentC + 1] = true;
+                        //must also take the piece
+                    }
                 }
             }
 
@@ -80,7 +86,13 @@ public class Pawn : ChessFigure
                 }
                 if (CurrentR == 3) //en passant
                 {
-                    
+                    int p_r = BoardManager.Instance.powerR;
+                    int p_c = BoardManager.Instance.powerC;
+                    if (p_r == CurrentR && p_c == CurrentC - 1)
+                    {
+                        result[CurrentR - 1, CurrentC - 1] = true;
+                        //must also take the piece
+                    }
                 }
             }
 
@@ -94,7 +106,13 @@ public class Pawn : ChessFigure
                 }
                 if (CurrentR == 3) //en passant
                 {
-                    
+                    int p_r = BoardManager.Instance.powerR;
+                    int p_c = BoardManager.Instance.powerC;
+                    if (p_r == CurrentR && p_c == CurrentC + 1)
+                    {
+                        result[CurrentR - 1, CurrentC + 1] = true;
+                        //must also take the piece
+                    }
                 }
             }
 
