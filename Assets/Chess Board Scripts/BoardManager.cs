@@ -37,6 +37,23 @@ public class BoardManager : MonoBehaviour
 
     void Update()
     {
-        
+        DrawChessBoard();
+    }
+
+    private void DrawChessBoard()
+    {
+        Vector3 widthLine = Vector3.right * 8;
+        Vector3 heightLine = Vector3.forward * 8;
+
+        for (int i = 0; i <= 8; i++)
+        {
+            Vector3 start = Vector3.forward * i;
+            Debug.DrawLine(start, start + widthLine);
+            for (int j = 0; j <= 8; j++)
+            {
+                start = Vector3.right * j;
+                Debug.DrawLine(start, start + heightLine);
+            }
+        }
     }
 }
