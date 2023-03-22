@@ -34,7 +34,7 @@ public class Pawn : ChessFigure
             //Capture right
             if (CurrentC != 7)
             {
-                ChessFigure c = BoardManager.Instance.figurePositions[CurrentR + 1, CurrentC - 1];
+                ChessFigure c = BoardManager.Instance.figurePositions[CurrentR + 1, CurrentC + 1];
                 if (c != null && !c.isWhite)
                 {
                     result[CurrentR + 1, CurrentC + 1] = true;
@@ -117,7 +117,7 @@ public class Pawn : ChessFigure
             }
 
             //Two steps forward
-            if (CurrentR == 1)
+            if (CurrentR == 6)
             {
                 ChessFigure c1 = BoardManager.Instance.figurePositions[CurrentR - 1, CurrentC];
                 ChessFigure c2 = BoardManager.Instance.figurePositions[CurrentR - 2, CurrentC];

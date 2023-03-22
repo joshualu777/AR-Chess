@@ -14,12 +14,12 @@ public class BoardManager : MonoBehaviour
     public int powerR;
     public int powerC;
 
-    private bool isWhiteTurn;
-    private ChessFigure selected;
-    private bool[,] legalMoves;
+    public bool isWhiteTurn;
+    public ChessFigure selected;
+    public bool[,] legalMoves;
 
-    public int selectionX;
-    public int selectionY;
+    public int selectionR;
+    public int selectionC;
 
     private static BoardManager _instance;
 
@@ -59,10 +59,10 @@ public class BoardManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (selectionX >= 0 && selectionY >= 0)
+            if (selectionR >= 0 && selectionC >= 0)
             {
-                if (selected == null) SelectChessFigure(selectionX, selectionY);
-                else MoveChessFigure(selectionX, selectionY);
+                if (selected == null) SelectChessFigure(7 - selectionR, selectionC);
+                else MoveChessFigure(7 - selectionR, selectionC);
             }
         }
     }
@@ -71,17 +71,15 @@ public class BoardManager : MonoBehaviour
     {
         RaycastHit hit;
         float raycastDistance = 100.0f;
-        Debug.Log("in");
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, raycastDistance))
         {
-            Debug.Log("hit");
-            selectionX = (int) hit.point.x;
-            selectionY = (int) hit.point.z;
+            selectionR = (int) hit.point.z;
+            selectionC = (int) hit.point.x;
         }
         else
         {
-            selectionX = -1;
-            selectionY = -1;
+            selectionR = -1;
+            selectionC = -1;
         }
     }
 
@@ -101,43 +99,43 @@ public class BoardManager : MonoBehaviour
             }
         }
 
-        if (selectionX >= 0 && selectionY >= 0)
+        if (selectionR >= 0 && selectionC >= 0)
         {
-            Debug.DrawLine(Vector3.forward * selectionY + Vector3.right * selectionX,
-                Vector3.forward * (selectionY + 1) + Vector3.right * (selectionX + 1));
-            Debug.DrawLine(Vector3.forward * selectionY + Vector3.right * (selectionX + 1),
-                Vector3.forward * (selectionY + 1) + Vector3.right * selectionX);
+            Debug.DrawLine(Vector3.forward * selectionR + Vector3.right * selectionC,
+                Vector3.forward * (selectionR + 1) + Vector3.right * (selectionC + 1));
+            Debug.DrawLine(Vector3.forward * selectionR + Vector3.right * (selectionC + 1),
+                Vector3.forward * (selectionR + 1) + Vector3.right * selectionC);
         }
     }
 
     private void SpawnAllChessFigures()
     {
         //white pieces
-        SpawnChessFigure(6, 0, 3); //king
-        SpawnChessFigure(7, 0, 4); //queen
-        SpawnChessFigure(8, 0, 0); SpawnChessFigure(8, 0, 7); //rooks
-        SpawnChessFigure(9, 0, 2); SpawnChessFigure(9, 0, 5); //bishops
-        SpawnChessFigure(10, 0, 1); SpawnChessFigure(10, 0, 6); //knights
+        SpawnChessFigure(0, 0, 3); //king
+        SpawnChessFigure(1, 0, 4); //queen
+        SpawnChessFigure(2, 0, 0); SpawnChessFigure(2, 0, 7); //rooks
+        SpawnChessFigure(3, 0, 2); SpawnChessFigure(3, 0, 5); //bishops
+        SpawnChessFigure(4, 0, 1); SpawnChessFigure(4, 0, 6); //knights
         for (int i = 0; i < 8; i++)
         {
-            SpawnChessFigure(11, 1, i); //pawn
+            SpawnChessFigure(5, 1, i); //pawn
         }
 
         //black pieces
-        SpawnChessFigure(0, 7, 3); //king
-        SpawnChessFigure(1, 7, 4); //queen
-        SpawnChessFigure(2, 7, 0); SpawnChessFigure(2, 7, 7); //rooks
-        SpawnChessFigure(3, 7, 2); SpawnChessFigure(3, 7, 5); //bishops
-        SpawnChessFigure(4, 7, 1); SpawnChessFigure(4, 7, 6); //knights
+        SpawnChessFigure(6, 7, 3); //king
+        SpawnChessFigure(7, 7, 4); //queen
+        SpawnChessFigure(8, 7, 0); SpawnChessFigure(8, 7, 7); //rooks
+        SpawnChessFigure(9, 7, 2); SpawnChessFigure(9, 7, 5); //bishops
+        SpawnChessFigure(10, 7, 1); SpawnChessFigure(10, 7, 6); //knights
         for (int i = 0; i < 8; i++)
         {
-            SpawnChessFigure(5, 6, i); //pawn
+            SpawnChessFigure(11, 6, i); //pawn
         }
     }
 
     private void SpawnChessFigure(int index, int r, int c)
     {
-        GameObject piece = Instantiate(pieces[index], GetTileCenter(r, c), pieces[index].transform.rotation) as GameObject;
+        GameObject piece = Instantiate(pieces[index], GetTileCenter(7 - r, c), pieces[index].transform.rotation) as GameObject;
         piece.transform.SetParent(transform);
         figurePositions[r, c] = piece.GetComponent<ChessFigure>();
         figurePositions[r, c].SetPosition(r, c);
@@ -175,11 +173,11 @@ public class BoardManager : MonoBehaviour
         if (!hasMove)
         {
             selected = null;
+            BoardHighlighting.Instance.HideHighlights();
             return;
         }
-
         selected = figurePositions[r, c];
-        //highlight legal moves
+        BoardHighlighting.Instance.HighlightAllowedMoves(legalMoves);
     }
 
     private void MoveChessFigure(int r, int c)
@@ -194,13 +192,13 @@ public class BoardManager : MonoBehaviour
             }
 
             figurePositions[selected.CurrentR, selected.CurrentC] = null;
-            selected.transform.position = GetTileCenter(r, c);
+            selected.transform.position = GetTileCenter(7 - r, c);
             selected.SetPosition(r, c);
             figurePositions[r, c] = selected;
             isWhiteTurn = !isWhiteTurn;
         }
 
-        //remove highlighting
+        BoardHighlighting.Instance.HideHighlights();
         selected = null;
     }
 }

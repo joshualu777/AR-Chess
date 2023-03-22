@@ -11,7 +11,7 @@ public abstract class ChessFigure : MonoBehaviour
     public void SetPosition(int r, int c)
     {
         CurrentR = r;
-        CurrentR = c;
+        CurrentC = c;
     }
 
     public virtual bool[,] PossibleMove()

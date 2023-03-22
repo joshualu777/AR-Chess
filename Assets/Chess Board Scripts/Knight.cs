@@ -10,11 +10,12 @@ public class Knight : ChessFigure
     public override bool[,] PossibleMove()
     {
         bool[,] result = new bool[8, 8];
-
+        Debug.Log("Original position: " + CurrentR + " " + CurrentC);
         for (int i = 0; i < dr.Length; i++) //iterates through the 8 directions
         {
             int r = CurrentR + dr[i];
             int c = CurrentC + dc[i];
+            Debug.Log("Testing position: " + r + " " + c);
 
             if (r >= 0 && r < 8 && c >= 0 && c < 8)
             {

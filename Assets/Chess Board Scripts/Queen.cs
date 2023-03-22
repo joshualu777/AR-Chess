@@ -13,16 +13,11 @@ public class Queen : ChessFigure
 
         for (int i = 0; i < dr.Length; i++) //iterates through the 8 directions
         {
-            int r = CurrentR;
-            int c = CurrentC;
+            int r = CurrentR + dr[i];
+            int c = CurrentC + dc[i];
 
             while (r >= 0 && r < 8 && c >= 0 && c < 8)
             {
-                if (r == CurrentR && c == CurrentC)
-                {
-                    continue;
-                }
-
                 ChessFigure piece = BoardManager.Instance.figurePositions[r, c];
                 if (piece == null)
                 {
