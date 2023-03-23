@@ -164,9 +164,17 @@ public class BoardManager : MonoBehaviour
             {
                 if (legalMoves[i, j])
                 {
+                    ChessFigure movingPiece = figurePositions[r, c];
+                    ChessFigure originalPiece = figurePositions[r, c];
+                    figurePositions[i, j] = movingPiece;
+                    figurePositions[r, c] = null;
+
+                    figurePositions[i, j] = originalPiece;
+                    figurePositions[r, c] = movingPiece;
+                }
+                if (legalMoves[i, j])
+                {
                     hasMove = true;
-                    i = 7;
-                    break;
                 }
             }
         }
