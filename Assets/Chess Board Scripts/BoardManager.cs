@@ -165,10 +165,15 @@ public class BoardManager : MonoBehaviour
                 if (legalMoves[i, j])
                 {
                     ChessFigure movingPiece = figurePositions[r, c];
-                    ChessFigure originalPiece = figurePositions[r, c];
+                    ChessFigure originalPiece = figurePositions[i, j];
+
+                    //make move without actually moving
                     figurePositions[i, j] = movingPiece;
                     figurePositions[r, c] = null;
 
+                    legalMoves[i, j] = LegalMoveManager.Instance.CheckLegal();
+
+                    //reset move
                     figurePositions[i, j] = originalPiece;
                     figurePositions[r, c] = movingPiece;
                 }
