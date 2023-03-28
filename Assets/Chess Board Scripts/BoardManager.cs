@@ -197,6 +197,12 @@ public class BoardManager : MonoBehaviour
     {
         if (legalMoves[r, c])
         {
+            if (selected.pieceType == PieceType.King && 
+                Mathf.Abs(c - selected.CurrentC) == 2)
+            {
+                Castle(r, c);
+            }
+
             ChessFigure square = figurePositions[r, c];
             if (square != null && square.isWhite != isWhiteTurn) //capture piece
             {
@@ -208,10 +214,33 @@ public class BoardManager : MonoBehaviour
             selected.transform.position = GetTileCenter(7 - r, c);
             selected.SetPosition(r, c);
             figurePositions[r, c] = selected;
+            figurePositions[r, c].hasMoved = true;
             isWhiteTurn = !isWhiteTurn;
         }
 
         BoardHighlighting.Instance.HideHighlights();
         selected = null;
+    }
+
+    private void Castle(int r, int c)
+    {
+        if (c == 1)
+        {
+            ChessFigure rook = figurePositions[r, 0];
+            rook.hasMoved = true;
+            figurePositions[rook.CurrentR, rook.CurrentC] = null;
+            rook.transform.position = GetTileCenter(7 - r, c + 1);
+            rook.SetPosition(r, c + 1);
+            figurePositions[r, c + 1] = rook;
+        }
+        else
+        {
+            ChessFigure rook = figurePositions[r, 7];
+            rook.hasMoved = true;
+            figurePositions[rook.CurrentR, rook.CurrentC] = null;
+            rook.transform.position = GetTileCenter(7 - r, c - 1);
+            rook.SetPosition(r, c - 1);
+            figurePositions[r, c - 1] = rook;
+        }
     }
 }

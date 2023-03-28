@@ -110,4 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 0
-  isKing: 1
+  hasMoved: 0
+  pieceType: 0

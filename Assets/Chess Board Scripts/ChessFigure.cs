@@ -7,8 +7,14 @@ public abstract class ChessFigure : MonoBehaviour
     public int CurrentR { get; set; }
     public int CurrentC { get; set; }
     public bool isWhite;
+    public bool hasMoved;
 
     public PieceType pieceType;
+
+    void Start()
+    {
+        hasMoved = false;
+    }
 
     public void SetPosition(int r, int c)
     {
