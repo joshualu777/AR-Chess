@@ -9,6 +9,8 @@ public class BoardManager : MonoBehaviour
     public ChessFigure[,] figurePositions;
 
     public GameObject[] pieces;
+    public Dictionary<PieceType, GameObject> whitePieces;
+    public Dictionary<PieceType, GameObject> blackPieces;
     public List<GameObject> active;
 
     public int powerR;
@@ -49,6 +51,7 @@ public class BoardManager : MonoBehaviour
         active = new List<GameObject>();
         isWhiteTurn = true;
 
+        InitializeMaps();
         SpawnAllChessFigures();
     }
 
@@ -83,6 +86,26 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    private void InitializeMaps()
+    {
+        whitePieces = new Dictionary<PieceType, GameObject>();
+        blackPieces = new Dictionary<PieceType, GameObject>();
+
+        whitePieces.Add(PieceType.King, pieces[0]);
+        whitePieces.Add(PieceType.Queen, pieces[1]);
+        whitePieces.Add(PieceType.Rook, pieces[2]);
+        whitePieces.Add(PieceType.Bishop, pieces[3]);
+        whitePieces.Add(PieceType.Knight, pieces[4]);
+        whitePieces.Add(PieceType.Pawn, pieces[5]);
+
+        blackPieces.Add(PieceType.King, pieces[6]);
+        blackPieces.Add(PieceType.Queen, pieces[7]);
+        blackPieces.Add(PieceType.Rook, pieces[8]);
+        blackPieces.Add(PieceType.Bishop, pieces[9]);
+        blackPieces.Add(PieceType.Knight, pieces[10]);
+        blackPieces.Add(PieceType.Pawn, pieces[11]);
+    }
+
     private void DrawChessBoard()
     {
         Vector3 widthLine = Vector3.right * 8;
@@ -111,35 +134,41 @@ public class BoardManager : MonoBehaviour
     private void SpawnAllChessFigures()
     {
         //white pieces
-        SpawnChessFigure(0, 0, 3); //king
-        SpawnChessFigure(1, 0, 4); //queen
-        SpawnChessFigure(2, 0, 0); SpawnChessFigure(2, 0, 7); //rooks
-        SpawnChessFigure(3, 0, 2); SpawnChessFigure(3, 0, 5); //bishops
-        SpawnChessFigure(4, 0, 1); SpawnChessFigure(4, 0, 6); //knights
+        SpawnChessFigure(whitePieces[PieceType.King], 0, 3); //king
+        SpawnChessFigure(whitePieces[PieceType.Queen], 0, 4); //queen
+        SpawnChessFigure(whitePieces[PieceType.Rook], 0, 0); //rook 1
+        SpawnChessFigure(whitePieces[PieceType.Rook], 0, 7); //rook 2
+        SpawnChessFigure(whitePieces[PieceType.Bishop], 0, 2); //bishop 1
+        SpawnChessFigure(whitePieces[PieceType.Bishop], 0, 5); //bishop 2
+        SpawnChessFigure(whitePieces[PieceType.Knight], 0, 1); //knight 1
+        SpawnChessFigure(whitePieces[PieceType.Knight], 0, 6); //knight 2
         for (int i = 0; i < 8; i++)
         {
-            SpawnChessFigure(5, 1, i); //pawn
+            SpawnChessFigure(whitePieces[PieceType.Pawn], 1, i); //pawn
         }
 
         //black pieces
-        SpawnChessFigure(6, 7, 3); //king
-        SpawnChessFigure(7, 7, 4); //queen
-        SpawnChessFigure(8, 7, 0); SpawnChessFigure(8, 7, 7); //rooks
-        SpawnChessFigure(9, 7, 2); SpawnChessFigure(9, 7, 5); //bishops
-        SpawnChessFigure(10, 7, 1); SpawnChessFigure(10, 7, 6); //knights
+        SpawnChessFigure(blackPieces[PieceType.King], 7, 3); //king
+        SpawnChessFigure(blackPieces[PieceType.Queen], 7, 4); //queen
+        SpawnChessFigure(blackPieces[PieceType.Rook], 7, 0); //rook 1
+        SpawnChessFigure(blackPieces[PieceType.Rook], 7, 7); //rook 2
+        SpawnChessFigure(blackPieces[PieceType.Bishop], 7, 2); //bishop 1
+        SpawnChessFigure(blackPieces[PieceType.Bishop], 7, 5); //bishop 2
+        SpawnChessFigure(blackPieces[PieceType.Knight], 7, 1); //knight 1
+        SpawnChessFigure(blackPieces[PieceType.Knight], 7, 6); //knight 2
         for (int i = 0; i < 8; i++)
         {
-            SpawnChessFigure(11, 6, i); //pawn
+            SpawnChessFigure(blackPieces[PieceType.Pawn], 6, i); //pawn
         }
     }
 
-    private void SpawnChessFigure(int index, int r, int c)
+    private void SpawnChessFigure(GameObject piece, int r, int c)
     {
-        GameObject piece = Instantiate(pieces[index], GetTileCenter(7 - r, c), pieces[index].transform.rotation) as GameObject;
-        piece.transform.SetParent(transform);
-        figurePositions[r, c] = piece.GetComponent<ChessFigure>();
+        GameObject chessPiece = Instantiate(piece, GetTileCenter(7 - r, c), piece.transform.rotation) as GameObject;
+        chessPiece.transform.SetParent(transform);
+        figurePositions[r, c] = chessPiece.GetComponent<ChessFigure>();
         figurePositions[r, c].SetPosition(r, c);
-        active.Add(piece);
+        active.Add(chessPiece);
     }
 
     private Vector3 GetTileCenter(int r, int c)
@@ -216,6 +245,32 @@ public class BoardManager : MonoBehaviour
             figurePositions[r, c] = selected;
             figurePositions[r, c].hasMoved = true;
             isWhiteTurn = !isWhiteTurn;
+
+            if (selected.pieceType == PieceType.Pawn)
+            {
+                if (selected.isWhite)
+                {
+                    if (selected.CurrentR == 7)
+                    {
+                        active.Remove(selected.gameObject);
+                        Destroy(selected.gameObject);
+
+                        //auto-promote to Queen for now
+                        SpawnChessFigure(whitePieces[PieceType.Queen], selected.CurrentR, selected.CurrentC);
+                    }
+                }
+                else
+                {
+                    if (selected.CurrentR == 0)
+                    {
+                        active.Remove(selected.gameObject);
+                        Destroy(selected.gameObject);
+
+                        //auto-promote to Queen for now
+                        SpawnChessFigure(blackPieces[PieceType.Queen], selected.CurrentR, selected.CurrentC);
+                    }
+                }
+            }
         }
 
         BoardHighlighting.Instance.HideHighlights();
