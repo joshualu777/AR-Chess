@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -226,10 +225,32 @@ public class BoardManager : MonoBehaviour
     {
         if (legalMoves[r, c])
         {
+            //checks for castle
             if (selected.pieceType == PieceType.King && 
                 Mathf.Abs(c - selected.CurrentC) == 2)
             {
                 Castle(r, c);
+            }
+
+            //checks for en passant
+            if (selected.pieceType == PieceType.Pawn &&
+                c != selected.CurrentC &&
+                figurePositions[r, c] == null)
+            {
+                EnPassant();
+            }
+
+            //checks for 2-square pawn push
+            if (selected.pieceType == PieceType.Pawn &&
+                Mathf.Abs(r - selected.CurrentR) == 2)
+            {
+                powerR = r;
+                powerC = c;
+            }
+            else
+            {
+                powerR = -1;
+                powerC = -1;
             }
 
             ChessFigure square = figurePositions[r, c];
@@ -297,5 +318,12 @@ public class BoardManager : MonoBehaviour
             rook.SetPosition(r, c - 1);
             figurePositions[r, c - 1] = rook;
         }
+    }
+
+    private void EnPassant()
+    {
+        active.Remove(figurePositions[powerR, powerC].gameObject);
+        Destroy(figurePositions[powerR, powerC].gameObject);
+        figurePositions[powerR, powerC] = null;
     }
 }
