@@ -1,0 +1,138 @@
+[Event "Tata Steel Chess Masters 2023"]
+[Site "Chess.com"]
+[Date "2023.01.29"]
+[Round "13"]
+[White "Abdusattorov, Nodirbek"]
+[Black "Van Foreest, Jorden"]
+[Result "0-1"]
+[ECO "B48"]
+[WhiteElo "2713"]
+[BlackElo "2681"]
+[Annotator "Rafael"]
+[PlyCount "98"]
+[EventDate "2023.??.??"]
+[TimeControl "40/6000+30:20/3000+30:900+30"]
+
+1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 Qc7 {The Sicilian Taimanov is
+one of my favorite defenses, and I'm happy whenever I see it in elite
+tournaments.} 6. Be3 a6 7. Qf3 {A modern move and currently considered one of
+the most dangerous ways to face the Taimanov.} 7... h5 $5 {[%c_effect
+h5;square;h5;type;Interesting;persistent;true] Only Black's eighth most popular
+move. Once again van Foreest lives up to his reputation as a creative player and
+a finder of new ideas even in well-known openings. This pawn advance is usually
+played only after 7...Ne5 8.Qg3.} 8. O-O-O (8. Qg3 d6 9. f4 b5 10. a3 Bb7 {with
+chances for both sides in Kuybokarov-Predke, Abu Dhabi 2022.}) 8... b5 9. Qg3 $146
+(9. Nxc6 Qxc6 10. Bd3 Bb7 11. Rhe1 Be7 12. Bd4 b4 (12... Nf6 {is possible.}) 13.
+Nd5 $1 {[%c_effect d5;square;d5;type;GreatFind;persistent;true]} 13... exd5 14.
+Bxg7 Rh6 15. exd5 Qxd5 16. Qxd5 Bxd5 17. Bxh6 Nxh6 18. Be4 Bxe4 19. Rxe4 {with a
+slight advantage for White in Hakobyan-Kavutskiy, Las Vegas 2022.}) 9... Qxg3
+10. hxg3 {White is usually better in this type of endgame, and I think this
+position is no exception. There are two breaking points that will be constant
+sources of concern for Black, the g4 advance and the a4 advance.} 10... Bc5 11.
+g4 {Other moves are also possible.} (11. Kb1 {As I always say to my students,
+the Kb1 move is almost never bad after long castling.} 11... Nxd4 12. Bxd4 Bxd4
+13. Rxd4 Ne7 14. Be2 Nc6 15. Rd2 {White has a tiny advantage.}) (11. Nf5 $5
+{[%c_effect f5;square;f5;type;Interesting;persistent;true]} 11... Bxe3+ 12. Nxe3
+Nf6 13. f3 {The position is more or less equal.}) (11. Be2) 11... Bb7 12. f3
+(12. gxh5 Nf6 {Black regains the pawn due to the threat of 13...b4 followed by
+capturing on e4.}) 12... g6 (12... h4 $5 {[%c_effect
+h4;square;h4;type;Interesting;persistent;true] This is the favorite move of the
+machine, which considers the position OK for Black. The move is hardly human, as
+the pawn seems to be abandoned to its own luck.}) 13. Nf5 (13. a4 $5 {[%c_effect
+a4;square;a4;type;Interesting;persistent;true] We will see this typical move in
+many lines. It creates weaknesses in Black's queenside and should always be
+considered.} 13... b4 14. Nce2 d6 15. Kb1 Nf6 16. Bg5 $1 {[%c_effect
+g5;square;g5;type;GreatFind;persistent;true]} 16... Nh7 17. Bh6 $1 {[%c_effect
+h6;square;h6;type;GreatFind;persistent;true] Black is under pressure since}
+17... hxg4 $2 {[%c_effect g4;square;g4;type;Mistake;persistent;true] fails to} 18.
+Bg7) 13... Bxe3+ 14. Nxe3 Ke7 15. Be2 d6 16. g5 (16. a3 Nf6 17. g5 Nd7 18. f4 f6
+19. gxf6+ Nxf6 20. Bf3 {with an even position.}) 16... f6 17. f4 {A risky move,
+as the pawn structure will be damaged. But White tactically justifies his plan.}
+(17. gxf6+ Nxf6 {with an equal position.}) 17... fxg5 18. fxg5 Ne5 19. Rd4 $1
+{[%c_effect d4;square;d4;type;GreatFind;persistent;true] A good move, setting up
+the counterplay with a2-a4.} 19... Rd8 $6 {[%c_effect
+d8;square;d8;type;Inaccuracy;persistent;true] This move order is imprecise.}
+(19... Nc6 20. Rd2 Ne5 {may lead to move repetition and a draw, something van
+Foreest usually avoids.}) (19... Nf7 20. Rhd1 (20. a4 $6 {[%c_effect
+a4;square;a4;type;Inaccuracy;persistent;true] Is not so good here, since the
+a8-rook comes into play after White captures on b5.} 20... Nxg5) 20... Rd8 21.
+a4 $1 {[%c_effect a4;square;a4;type;GreatFind;persistent;true]} 21... Nxg5 22. e5
+Nf7 23. axb5 axb5 24. exd6+ Rxd6 25. Nxb5 Rxd4 26. Nxd4 {with a likely draw.})
+20. Rhd1 $6 {[%c_effect d1;square;d1;type;Inaccuracy;persistent;true]} (20. a4 $1
+{[%c_effect a4;square;a4;type;GreatFind;persistent;true] This is the correct
+move to exploit Black's inaccuracy.} 20... Nc6 21. Rd2 b4 22. Ncd1 {The knight
+goes to h3, defending the g5-pawn, while the other knight can go to c4. White
+has the advantage.}) 20... h4 $6 {[%c_effect
+h4;square;h4;type;Inaccuracy;persistent;true] Too ambitious.} (20... Nc6 21.
+R4d2 Ne5 {With a probable move repetition.}) (20... Nf7 21. a4 {leads to the
+variation seen above.}) 21. Ng4 $6 {[%c_effect
+g4;square;g4;type;Inaccuracy;persistent;true]} (21. a4 $1 {[%c_effect
+a4;square;a4;type;GreatFind;persistent;true] Again this move leads to an
+advantage for White.} 21... Nc6 22. R4d2 b4 (22... bxa4 23. Nc4 $1 {[%c_effect
+c4;square;c4;type;GreatFind;persistent;true] and the d-pawn falls.}) 23. Na2
+{Black will have a hard time defending the weaknesses on the queenside.}) 21...
+Nc6 22. R4d2 (22. R4d3 {This move gives White additional options after} 22...
+Rh5 23. e5 d5 {since now the rook can move across the third rank, either to h3
+or c3.} 24. Ne4 (24. Rh3 $5 {[%c_effect
+h3;square;h3;type;Interesting;persistent;true]}) 24... Bc8 25. Ngf6 Rh8 26.
+Rc3 $5 {[%c_effect c3;square;c3;type;Interesting;persistent;true] This is a
+difference compared to the game.} 26... Nxe5 27. Rc7+ Bd7 28. Nxd5+ $1 {[%c_effect
+d5;square;d5;type;GreatFind;persistent;true]} 28... exd5 29. Rxd5 Ke6 30. Rcc5
+Nc6 31. Bg4+ Ke7 32. Rxd7+ Rxd7 33. Rxc6 Rd4 $1 {[%c_effect
+d4;square;d4;type;GreatFind;persistent;true]} 34. Re6+ Kf7 35. c3 {with
+excellent compensation for the exchange.}) 22... Rh5 23. e5 d5 24. Ne4 $1
+{[%c_effect e4;square;e4;type;GreatFind;persistent;true] Abdusattorov shows his
+great tactical vision and manages to activate the knight in a creative way.}
+24... Bc8 (24... dxe4 {This seems to be losing for Black, but the computer finds
+some incredible resources.} 25. Rxd8 Nxd8 26. Nf6 {Many (if not all) humans
+would rule out this variation for Black here, but the machine plays along.}
+26... Rxg5 $1 {[%c_effect g5;square;g5;type;GreatFind;persistent;true]} (26...
+Nxf6 $2 {[%c_effect f6;square;f6;type;Mistake;persistent;true]} 27. exf6+ Ke8 28.
+Bxh5 gxh5 29. g6 {and the pawns decide the game.}) 27. Rd7+ Kf8 28. Rxd8+ Kf7 $1
+{[%c_effect f7;square;f7;type;GreatFind;persistent;true]} 29. Rxg8 e3 $1
+{[%c_effect e3;square;e3;type;GreatFind;persistent;true] and the computer
+continues with incredible variations showing a draw.}) 25. Ngf6 $6 {[%c_effect
+f6;square;f6;type;Inaccuracy;persistent;true]} (25. Ngf2 $1 {[%c_effect
+f2;square;f2;type;GreatFind;persistent;true] is a difficult move and better than
+the one played in the game.} 25... Rh8 (25... dxe4 26. Rxd8 Nxd8 27. Bxh5 gxh5
+28. Nxe4 {White has some advantage in this unbalanced endgame.}) 26. Nd6 Nxe5
+27. Nxc8+ Rxc8 28. Re1 {With good compensation for the pawn, as Black has
+difficulties defending the central pawns.}) 25... Rh8 26. Nxg8+ Rdxg8 27. Nf6
+Rd8 28. Re1 h3 $6 {[%c_effect h3;square;h3;type;Inaccuracy;persistent;true]}
+(28... Nxe5 $1 {[%c_effect e5;square;e5;type;GreatFind;persistent;true] leads to
+an advantage for Black:} 29. Bxb5 h3 $1 {[%c_effect
+h3;square;h3;type;GreatFind;persistent;true] This move was probably missed by
+van Foreest.} 30. Bd3 (30. gxh3 $2 {[%c_effect
+h3;square;h3;type;Mistake;persistent;true]} 30... Nf3) (30. Rxe5 $2 {[%c_effect
+e5;square;e5;type;Mistake;persistent;true]} 30... h2 $19) 30... h2 31. Rh1 Bb7
+{with a clear advantage.}) 29. gxh3 Rxh3 30. Bg4 $6 {[%c_effect
+g4;square;g4;type;Inaccuracy;persistent;true]} (30. Bd3 $1 {[%c_effect
+d3;square;d3;type;GreatFind;persistent;true] is better.} 30... Rdh8 (30... Kf7 $6
+{[%c_effect f7;square;f7;type;Inaccuracy;persistent;true]} 31. Rf2 Kg7 32. b3
+{Black has no active plan since} 32... Rdh8 $2 {[%c_effect
+h8;square;h8;type;Mistake;persistent;true]} 33. Ref1 $1 {[%c_effect
+f1;square;f1;type;GreatFind;persistent;true]} 33... Nxe5 {loses to} 34. Ng4 $1
+{[%c_effect g4;square;g4;type;GreatFind;persistent;true] with the idea:} 34...
+Nxg4 35. Rf7+ Kg8 36. Rf8+ Kg7 37. R1f7#) 31. Bxg6 Rg3 32. Nh7 $1 {[%c_effect
+h7;square;h7;type;GreatFind;persistent;true]} 32... Bd7 {and the game will
+likely end in a draw, for instance:} 33. Rd3 Rxd3 34. Bxd3 Rg8 35. g6 Rg7 36.
+Nf6 Nxe5 $1 {[%c_effect e5;square;e5;type;GreatFind;persistent;true]} 37. Nxd5+
+Kd6 38. Nf4 Nxd3+ 39. cxd3 e5 $1 {[%c_effect
+e5;square;e5;type;GreatFind;persistent;true] The g-pawn falls and the players
+can shake hands.}) 30... Rh4 31. b3 Rdh8 32. Kb2 Rh2 33. Ree2 Rxe2 34. Rxe2 a5 $1
+{[%c_effect a5;square;a5;type;GreatFind;persistent;true] The position is very
+unpleasant for White because of the weaknesses on g5 and e5. Black's move is
+intended to activate the bishop.} 35. a3 Ba6 36. Re1 b4 37. a4 $6 {[%c_effect
+a4;square;a4;type;Inaccuracy;persistent;true]} (37. axb4 {Gives better drawing
+chances.} 37... Nxb4 (37... axb4 {This is also possible, but in this case it's
+clear that the pawn exchange was helpful for White, as usually the case when
+defending a worse endgame.}) 38. Be2 Bxe2 39. Rxe2) 37... Nd8 $1 {[%c_effect
+d8;square;d8;type;GreatFind;persistent;true] An excellent move. The knight heads
+to f7, attacking both weaknesses.} 38. Be2 $6 {[%c_effect
+e2;square;e2;type;Inaccuracy;persistent;true]} (38. Bf3 {is a better try, with
+the idea of sacrificing the bishop on d5 if the knight goes to f7.}) 38... Bxe2
+39. Rxe2 Nf7 {Now the pawns fall, and the position is undefendable.} 40. c3
+bxc3+ 41. Kxc3 Nxg5 42. b4 Rh3+ {The rest is easy.} 43. Kb2 axb4 44. Rc2 Nf3 45.
+Ng4 Nd4 46. Rc8 Rb3+ 47. Ka2 Ra3+ 48. Kb2 Rxa4 49. Nf6 b3 {A heartbreaking loss
+for Abdusattorov and a great victory for van Foreest, a player whose games are
+always entertaining.} 0-1

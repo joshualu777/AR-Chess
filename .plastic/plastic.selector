@@ -1,4 +1,0 @@
-repository "DynamicTheater@yujnkm@cloud"
-  path "/"
-    br "/main"
-    co "/main"
