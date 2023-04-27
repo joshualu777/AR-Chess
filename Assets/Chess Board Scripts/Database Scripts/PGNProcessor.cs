@@ -164,6 +164,7 @@ public class PGNProcessor
                 line += BuildString(game, textStart, textEnd);
                 header.Add(line);
                 index = textEnd + 4;
+                Debug.Log(line);
             }
             else
             {

@@ -148,6 +148,14 @@ public class BoardManager : MonoBehaviour
         }
     }
 
+    public void ResetBoard()
+    {
+        while (moveLog.Count > 0)
+        {
+            UndoMove();
+        }
+    }
+
     private void InitializeMaps()
     {
         whitePieces = new Dictionary<PieceType, GameObject>();

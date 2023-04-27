@@ -80,9 +80,10 @@ public class Game
             int firstSpaceIndex = curInfo.IndexOf(' ');
             string first = curInfo.Substring(0, firstSpaceIndex);
             string second = curInfo.Substring(firstSpaceIndex + 1);
+            Debug.Log(first + ": " + second);
             if (keyInfo.ContainsKey(first))
             {
-                keyInfo[keyInfo[first]] = second;
+                keyInfo[first] = second;
             }
         }
         if (!char.IsDigit(keyInfo["WhiteElo"][0]))

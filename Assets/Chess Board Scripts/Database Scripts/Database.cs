@@ -26,8 +26,8 @@ public class Database
         qualityGameCount = 0;
     }
 
-    public List<GameData> GetGames() { return allGames; }
-    public int GetGameCount() { return gameCount; }
+    public List<GameData> GetAllGames() { return allGames; }
+    public int GetAllGameCount() { return gameCount; }
     public  List<GameData> GetQualityGames() { return qualityGames; }
     public int GetQualityGameCount() { return qualityGameCount; }
 

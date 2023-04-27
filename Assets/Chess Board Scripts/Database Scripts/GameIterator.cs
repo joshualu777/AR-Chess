@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -62,13 +63,15 @@ public class GameIterator : MonoBehaviour
         }
         return currentMove;
     }
-    public Move returnLine()
+    public int ReturnLine()
     {
+        int cnt = 0;
         if (diverge.Count > 0)
         {
             currentMove = diverge.Pop();
+            cnt++;
         }
-        return currentMove;
+        return cnt;
     }
 
     public bool AddMove(Move move)
