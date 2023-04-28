@@ -1,3 +1,5 @@
+using Microsoft.MixedReality.Toolkit;
+using Microsoft.MixedReality.Toolkit.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +14,9 @@ public class DatabaseController : MonoBehaviour
     public GameObject variationPanelPrefab;
     public Transform panelLocation;
     public GameObject variationButtonPrefab;
+
+    public GameObject gamePanel;
+    public GameObject gameButtonPrefab;
 
     private Database database;
     private PGNProcessor processor;
@@ -95,11 +100,11 @@ public class DatabaseController : MonoBehaviour
         string result = "There are no games in the database\n";
         if (database.GetAllGameCount() > 0)
         {
-            result = "Here are all the games in the database: \n\n";
+            result = "All games displayed, please select the one you would like to study";
             for (int i = 0; i < database.GetAllGameCount(); i++)
             {
-                result += (i + 1) + ") " + 
-                    database.GetAllGames()[i].GetGame().GetQuickFormat() + "\n";
+                gamePanel.transform.GetChild(i).GetComponent<GameButtonController>().InitializeMoveButton(i, false,
+                    database.GetAllGames()[i].GetGame().GetQuickFormat());
             }
         }
         textController.UpdateText(result);
@@ -121,10 +126,12 @@ public class DatabaseController : MonoBehaviour
 
     public void ChooseAllGame(int index)
     {
+        if (!isReady) return;
         RunGame(database.LoadGame(index, false));
     }
     public void ChooseQualityGame(int index)
     {
+        if (!isReady) return;
         RunGame(database.LoadGame(index, true));
     }
 

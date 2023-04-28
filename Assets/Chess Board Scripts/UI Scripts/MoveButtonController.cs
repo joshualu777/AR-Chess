@@ -7,16 +7,17 @@ public class MoveButtonController : MonoBehaviour
 {
     public int index;
     public string moveText;
-    public TextMeshPro moveTextPro;
+    public TextMeshPro textMeshPro;
 
     public void ClickBranch()
     {
+        if (index == -1) return;
         DatabaseController.Instance.VariationClicked(index);
     }
     public void InitializeMoveButton(int index, string move)
     {
         this.index = index;
         moveText = move;
-        moveTextPro.text = moveText;
+        textMeshPro.text = moveText;
     }
 }

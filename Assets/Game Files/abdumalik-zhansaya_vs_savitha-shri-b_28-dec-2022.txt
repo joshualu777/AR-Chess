@@ -1,0 +1,28 @@
+[Event "FIDE Women's World Rapid Chess Championship 2022"]
+[Site "Chess.com"]
+[Date "2022.12.28"]
+[Round "09"]
+[White "Abdumalik, Zhansaya"]
+[Black "Savitha, Shri B"]
+[Result "1-0"]
+[WhiteElo "2496"]
+[BlackElo "2411"]
+[TimeControl "900+10"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 a6 8.
+O-O-O Bd7 9. f4 Be7 10. Nf3 b5 11. Bxf6 gxf6 12. f5 Qb6 13. Kb1 Rc8 14. Bd3 Na5
+15. Ne2 Nc4 16. Bxc4 bxc4 17. fxe6 fxe6 18. Nfd4 Qb7 19. Nc3 Rb8 20. b3 cxb3 21.
+cxb3 Rc8 22. Rc1 O-O 23. Rhf1 Kh8 24. Rf3 a5 25. Ka1 d5 26. exd5 e5 27. Nf5 Bxf5
+28. Rxf5 Bb4 29. Rf3 Rf7 30. Qh6 Bf8 31. Qh5 e4 32. Rh3 f5 33. Rf1 {Abdumalik
+chooses to go after the black king at all costs in this game. With correct
+defense, Black should be able to survive comfortably.} 33... Qa6 $2 {[%c_effect
+a6;square;a6;type;Mistake;persistent;true][%cal da6f1][%c_arrow
+a6f1;keyPressed;none;from;a6;opacity;0.8;to;f1;persistent;false]} (33... Qa7
+{This move is twofold... first, it introduces threats on the dark squares such
+as Rxc3 followed by Qd4. and secondly, it continues to aid in the defense of the
+seventh rank.}) 34. Rxf5 Rg7 35. Rf7 Rxf7 36. Qxf7 {Although Black's king is in
+trouble there is a defense that draws.} 36... h6 $4 {[%c_effect
+h6;square;h6;type;Blunder;persistent;true] Completely losing on the spot.}
+(36... Bh6 $1 {[%c_effect h6;square;h6;type;GreatFind;persistent;true] Completely
+blocking off White's attack. No good checks are available for White now.}) 37.
+Rg3 {Black can only prolong checkmate with} (37. Rg3 Qf1+ 38. Qxf1) 1-0

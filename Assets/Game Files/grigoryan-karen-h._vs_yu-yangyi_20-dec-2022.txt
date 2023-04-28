@@ -1,0 +1,80 @@
+[Event "Sunway Sitges Chess Festival 2022"]
+[Site "Chess.com"]
+[Date "2022.12.20"]
+[Round "8"]
+[White "Grigoryan, Karen H."]
+[Black "Yu, Yangyi"]
+[Result "0-1"]
+[ECO "E36"]
+[WhiteElo "2619"]
+[BlackElo "2728"]
+[Annotator "rafael"]
+[PlyCount "46"]
+[Beauty "8248082048520"]
+[EventDate "2022.??.??"]
+[TimeControl "5400+30"]
+
+1. d4 {Notes by GM Rafael Leitao.} 1... Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 d5 5. a3
+Bxc3+ 6. Qxc3 O-O 7. Nf3 dxc4 8. Qxc4 b6 9. Bg5 c5 $1 {[%c_effect
+c5;square;c5;type;GreatFind;persistent;true] A recent idea in a very well-known
+position. This move was played in some high-profile games in 2022. The first to
+play it was Grischuk.} 10. dxc5 (10. e4 Ba6 (10... h6 {is also possible.}) 11.
+Qc2 h6 12. Bxf6 Qxf6 13. Bxa6 Nxa6 {with a roughly equal position in
+Inarkiev-Radjabov, Krasnogorsk Rapid 2022.}) 10... bxc5 11. Qxc5 {The critical
+move, but no one before had the courage to accept the pawn.} (11. Rd1 Qa5+ 12.
+Bd2 Qb6 {Black is fine: Lazarev-Milliet, Chartres 2022.}) (11. Qc2 h6 12. Bxf6
+Qxf6 13. e3 Nd7 14. Be2 Rb8 {with an equal position: Maiorov-Kulaots, Viljandi
+Raud Memorial 2022.}) (11. Rc1 Nbd7 12. e4 h6 13. Bf4 e5 14. Nxe5 Nxe5 15. Bxe5
+Re8 16. Bxf6 Qxf6 17. Be2 Qxb2 {with equality in Howell-Grandelius, London
+2022.}) (11. Nd2 Ba6 12. Qc2 h6 13. Bh4 Nbd7 {and Grischuk was fine in the game
+where he introduced this idea, although he later lost. Shankland-Grischuk,
+Belgrade 2022.}) 11... Nbd7 12. Qd4 {It's not easy to choose a square for the
+queen.} (12. Qd6 Rb8 {With compensation similar to what we will see in the
+game.}) (12. Qc2 {The queen is vulnerable on the c-file.} 12... Bb7 (12... Ba6
+{is also good.})) 12... e5 13. Qd6 (13. Nxe5 $4 {[%c_effect
+e5;square;e5;type;Blunder;persistent;true] Of course the pawn cannot be taken
+due to} 13... Qa5+ {winning the knight.}) 13... Rb8 14. Bxf6 (14. b4 $1
+{[%c_effect b4;square;b4;type;GreatFind;persistent;true] This move is more
+accurate, capturing the knight only after the queen has been attacked. This is
+the only chance to fight for an advantage.} 14... Rb6 15. Bxf6 $1 {[%c_effect
+f6;square;f6;type;GreatFind;persistent;true]} 15... gxf6 $1 {[%c_effect
+f6;square;f6;type;GreatFind;persistent;true]} (15... Qxf6 $6 {[%c_effect
+f6;square;f6;type;Inaccuracy;persistent;true] doesn't give enough compensation
+in the endgame since Black had to play Rb6 which is not so useful. Just compare
+the position with the one we will see in the game.}) 16. Qd2 e4 $1 {[%c_effect
+e4;square;e4;type;GreatFind;persistent;true] A difficult move to play, giving
+the d4-square to the knight. The computer, however, claims this is the right way
+to go and I'm not in a position to disagree.} 17. Nd4 Ne5 18. e3 f5 19. g3 (19.
+Be2 f4 $1 {[%c_effect f4;square;f4;type;GreatFind;persistent;true]}) 19... Qf6 20.
+Be2 Rd8 {with adequate compensation for the pawn.}) 14... Qxf6 {Now Black has
+this additional option.} (14... gxf6 15. b4 Rb6 {Transposes to the analysis of
+the move 14.b4.}) 15. Qxf6 gxf6 16. b4 a5 $1 {[%c_effect
+a5;square;a5;type;GreatFind;persistent;true] Black is fine, but it's surprising
+that the game will be over in a few moves, as the material is reduced and it's
+possible to force a draw.} 17. bxa5 {All roads seem to lead to a draw. This is
+the natural result after all the variations below.} (17. g3 axb4 18. axb4 Rxb4
+19. Bh3 Rb2 20. Nh4) (17. e3 axb4 18. axb4 Rxb4 19. Be2 Rb2 20. Nd2) (17. Rb1
+axb4 18. axb4 (18. Rxb4 Ra8 19. a4 Nc5) 18... Nc5 19. Nd2 Na4) 17... Nc5 18.
+g4 $6 {[%c_effect g4;square;g4;type;Inaccuracy;persistent;true] The beginning of
+the problems. This rather strange move aims to develop the bishop and prevent
+Black's bishop from developing on f5, but it has negative points as well.} (18.
+Nd2 {is better, for instance:} 18... Rd8 19. Rb1 {and White should be able to
+achieve a draw without big problems.}) 18... Rd8 (18... Bxg4 $4 {[%c_effect
+g4;square;g4;type;Blunder;persistent;true]} 19. Rg1 {wins the bishop.}) 19. Rg1 $2
+{[%c_effect g1;square;g1;type;Mistake;persistent;true] After this it's game
+over. White should desperately try to finish the development.} (19. Bh3 {This is
+a typical computer move, as the machine doesn't care about the aesthetic sense.
+This is a move a GM would make with a broken heart, as we don't like to make an
+\"ugly\" move.}) (19. Bg2 {is my favorite try.} 19... Bxg4 20. O-O Nb3 21. Rab1
+Nxa5 22. Rxb8 Rxb8 {Black is slightly better in the endgame, but a draw is the
+correct outcome.}) 19... e4 20. Nh4 (20. Nd2 Rxd2 $1 {[%c_effect
+d2;square;d2;type;GreatFind;persistent;true]} 21. Kxd2 Nb3+ {wins material.})
+20... Nb3 21. Ra2 {A sad necessity.} (21. Rb1 Nd4 $1 {[%c_effect
+d4;square;d4;type;GreatFind;persistent;true] This is the point.} 22. Rc1 (22.
+Rxb8 Nc2#) 22... Nc2+ 23. Rxc2 Rb1+) (21. Rd1 Nd4 $1 {[%c_effect
+d4;square;d4;type;GreatFind;persistent;true]}) 21... Nxa5 (21... Nd4 {also wins,
+but there's no problem in being extra safe and capturing the a5-pawn first.})
+22. Ra1 (22. f3 e3 $1 {[%c_effect e3;square;e3;type;GreatFind;persistent;true]})
+22... Nb3 23. Ra2 Nd4 $1 {[%c_effect d4;square;d4;type;GreatFind;persistent;true]
+Mate or huge material losses are unavoidable.} (23... Nd4 24. Kd2 (24. e3 Nf3+
+25. Nxf3 Rb1+ 26. Ke2 Ba6#) (24. Ra1 Nc2#) 24... Nf3+) 0-1

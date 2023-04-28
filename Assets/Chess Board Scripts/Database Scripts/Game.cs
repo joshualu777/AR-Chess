@@ -65,7 +65,7 @@ public class Game
     public string GetQuickFormat()
     {
         string playerInfo = "White: " + keyInfo["White"] + " (" +
-            keyInfo["WhiteElo"] + ") vs " +
+            keyInfo["WhiteElo"] + ") vs\n" +
             "Black: " + keyInfo["Black"] + " (" +
             keyInfo["BlackElo"] + ")";
         return playerInfo;

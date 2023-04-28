@@ -1,0 +1,64 @@
+[Event "Tata Steel Chess Masters 2023"]
+[Site "Chess.com"]
+[Date "2023.01.29"]
+[Round "13"]
+[White "Aronian, Levon"]
+[Black "Maghsoodloo, Parham"]
+[Result "0-1"]
+[WhiteElo "2735"]
+[BlackElo "2719"]
+[PlyCount "118"]
+[EventDate "2023.??.??"]
+[TimeControl "40/6000+30:20/3000+30:900+30"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be2 e5 7. Nb3 Be7 8. Be3
+Be6 9. O-O Nbd7 10. a4 Rc8 11. a5 O-O 12. Bf3 {Over 100 games played in this
+position, and Maghsoodloo finds a novelty $1} 12... Ne8 $146 (12... Qc7) (12... Rc4)
+(12... Re8) 13. Qd2 {Preventing Bg5.} 13... h6 {Making g5 a possibility again.}
+14. h3 Nef6 {A curious turn of events. Black gives up on Bg5 as he does not want
+to enter the endgame. Still lots of tension remain in the position, and he's
+provoked two moves: Qd2 and h3.} (14... Bg5 15. Bxg5 Qxg5 16. Qxg5 hxg5 17. Rfd1
+{White would be slightly better with pressure on the backward pawn.}) 15. Rfd1
+Re8 16. Qe1 Rc6 17. Nd2 Nf8 18. Nf1 Ng6 19. Ng3 Qc8 {How deep was the
+preparation $2 Provoking h3 seems justified now as Black concentrates his forces
+on the white king and also prevents Nd5 due to pressure on c2.} 20. Rd2 Nh4 $1
+{[%c_effect h4;square;h4;type;GreatFind;persistent;true] Attacking the f3-bishop
+but also preventing White from playing Nf5.} 21. Be2 Rxc3 $1 {[%c_effect
+c3;square;c3;type;GreatFind;persistent;true] The engine is not astounded by this
+move, but it does not change the evaluation. It is a classic Sicilian exchange
+sacrifice.} 22. bxc3 d5 23. f3 (23. exd5 Nxd5 {would give Black too much play on
+the doubled pawns on top of winning the bishop pair.}) 23... Qxc3 24. Bf2 {White
+consolidates.} 24... d4 25. Rdd1 Qc7 26. c3 $6 {[%c_effect
+c3;square;c3;type;Inaccuracy;persistent;true]} (26. Bd3 Ng6 27. Ne2 Rc8 28. Rdc1
+{In hindsight, this would have been more solid, but it is a passive way of
+playing.}) 26... dxc3 {Black wins a pawn and holds on to it. Now he has two
+pawns for the exchange, although only one of them is passed.} 27. Bb6 Qc6 28.
+Rdc1 Rc8 29. Bd1 Nd7 30. Ba4 Qc4 31. Bf2 Bb4 (31... Bg5 {is better. The
+following line isn't the only way to play it for Black, but it is the most
+beautiful I think.} 32. Be3 (32. Rc2 Bd2 {is clearly enough compensation. The
+engine recommends giving the exchange back already.}) 32... Bxh3 $1 {[%c_effect
+h3;square;h3;type;GreatFind;persistent;true] Someone call Shirov $1} (32... Ng6
+{is totally playable for an edge too.}) 33. Bxg5 hxg5 34. Qf1 Qd4+ 35. Qf2 Nc5 $3
+{[%c_effect c5;square;c5;type;Brilliant;persistent;true] with many things
+hanging. I think this move is a bit inhuman.} 36. gxh3 Nxf3+ 37. Kg2 Nh4+ 38.
+Kg1 Nxa4 39. Qxd4 exd4 40. Rxa4 d3 {Black is down a full rook but still
+significantly thanks to the connected passers.}) 32. Nf1 Ng6 33. Ne3 $2
+{[%c_effect e3;square;e3;type;Mistake;persistent;true]} (33. Bxd7 $1 {[%c_effect
+d7;square;d7;type;GreatFind;persistent;true] is the proper order of operations.}
+33... Bxd7 34. Ne3 Qc7 35. Nd5 Qd6 36. Nb6 Rc7 37. Rd1 Qc6 38. Nd5 c2 39. Qxb4
+cxd1=Q+ 40. Rxd1 Rc8 41. Nb6 Rc7 42. Na8 Rc8 43. Nb6 {with a draw by
+repetition.}) 33... Qc7 34. Bxd7 Qxd7 {What's the difference $2 White can't play
+Nd5 here $1} 35. Rcb1 (35. Rd1 Qc7 36. Nd5 {Here White gets the knight to d5 but
+loses to the c-pawn.} 36... Bxd5 37. exd5 Qc4 38. Qe4 c2 {with Nf4 (threatening
+Ne2) coming, Black is winning.}) 35... Bf8 36. g3 c2 37. Rc1 Bb3 {The c-pawn is
+a bone in the throat.} 38. Qe2 Rc6 39. Kg2 Bb4 40. Rxc2 {Desperation, but this
+is not good enough to hold.} (40. Be1 Bxe1 41. Rxe1 Rd6 {with Rd2 or Rd1 coming,
+Black wins.}) 40... Bxc2 41. Nxc2 Bc5 {Black is now up a pawn, but White's king
+safety is a permanent factor to boot.} 42. Rb1 Bxf2 43. Qxf2 Rd6 44. Re1 Qd8
+(44... Rd2 45. Re2 Rxe2 46. Qxe2 Qd8 {works too, but keeping the heavy pieces on
+the board with a weak white king is understandable.}) 45. Ne3 Rd2 46. Re2 Rxe2
+47. Qxe2 Qxa5 {Now Black is up two pawns.} 48. Nd5 Qa3 49. Qd2 Ne7 50. Ne3 Nc6
+51. Nf5 Nd4 $1 {[%c_effect d4;square;d4;type;GreatFind;persistent;true] Ending all
+dreams of a white counterattack with queen and knight.} 52. Nxd4 exd4 53. Qxd4
+Qa2+ 54. Kg1 a5 {Well evaluated by Maghsoodloo. The a-pawn marches without a
+hitch.} 55. h4 a4 56. h5 Qb1+ 57. Kg2 Qc2+ 58. Kh3 a3 59. g4 a2 0-1

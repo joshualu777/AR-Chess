@@ -1,0 +1,57 @@
+[Event "Tata Steel Chess Masters 2023"]
+[Site "Chess.com"]
+[Date "2023.01.17"]
+[Round "04"]
+[White "Abdusattorov, Nodirbek"]
+[Black "Maghsoodloo, Parham"]
+[Result "1-0"]
+[WhiteElo "2713"]
+[BlackElo "2719"]
+[TimeControl "6000+30"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. d3 d6 7. c3 O-O 8. Re1 b5
+9. Bc2 Re8 10. Nbd2 Bf8 11. Nf1 g6 12. h3 Bg7 13. Ng3 d5 14. d4 dxe4 15. Nxe4
+exd4 16. Bg5 $1 {[%c_effect g5;square;g5;type;GreatFind;persistent;true] It's
+always fascinating to see the top players infuse new ideas in age-old openings
+like the Ruy Lopez.} 16... Be6 17. Bb3 (17. cxd4 $16) 17... h6 18. Bxe6 Rxe6 19.
+Nxf6+ Bxf6 20. Rxe6 fxe6 21. Qe2 $5 {[%c_effect
+e2;square;e2;type;Interesting;persistent;true] Abdusattorov ignores his
+opponent's threat on his g5-bishop to go after the weaknesses in Maghsoodloo's
+position.} 21... hxg5 22. Qxe6+ Kh7 23. Qxc6 dxc3 24. bxc3 b4 25. Re1 {Again the
+rising 18-year-old ignores his opponent's pressure on his position to in favor
+of activity. The rook is headed to the sixth rank to create threats around the
+black king.} 25... bxc3 26. Re6 Kg7 27. Ne5 Qd1+ 28. Kh2 Bxe5+ 29. Rxe5 Qd6 30.
+Qxc3 Re8 31. f4 Kf8 32. Rxg5 Qxf4+ 33. Rg3 Re6 34. Kg1 {The smoke has cleared to
+leave the players with a fairly level position. However, White has the long-term
+advantage of fewer pawn islands and more pawn cover for his king.} 34... Kg8 35.
+Rd3 c5 36. Rd8+ Kf7 37. Rd7+ Ke8 38. Rd5 Qh4 (38... Qe3+ {is safer:} 39. Qxe3
+Rxe3 40. Rxc5 Ra3 41. Rc2 Kf7) 39. Rd1 c4 $6 {[%c_effect
+c4;square;c4;type;Inaccuracy;persistent;true] Black overlooks a key idea by
+White.} (39... Kf7) 40. Rf1 $1 {[%c_effect
+f1;square;f1;type;GreatFind;persistent;true] The white rook shuts the black king
+out from the kingside and the bit of pawn cover that it offers.} 40... Kd7 41.
+Qb4 Qd4+ 42. Kh1 Qd5 43. Qf8 Re7 44. Qf6 Rh7 45. Rf4 $1 {[%c_effect
+f4;square;f4;type;GreatFind;persistent;true] Abdusattorov is not even worried
+about his opponent removing a pawn from his king's cover with check  $1} 45... Kc7
+({Surprisingly,} 45... Rxh3+ $2 {[%c_effect
+h3;square;h3;type;Mistake;persistent;true] is a mistake:} 46. Kg1 Rd3 47. Qg7+
+Kc6 48. Qxg6+ Kc5 49. Rf5) 46. Rd4 Rf7 47. Qh8 Qb5 48. a4 {Kicking the black
+queen off the strong b5-square where it is both active and covering key squares
+around the king.} 48... Qc5 49. Rd1 Rd7 50. Rb1 Rd8 51. Qg7+ Rd7 52. Qb2 Kc6 53.
+Qb8 {Abdusattorov has woven his queen into the back of Black's position, chasing
+the king further into the center where there are tactical landmines lying.}
+53... Rd3 54. Qb7+ Kd6 55. Qxa6+ Ke7 56. Qxg6 {The extra pawns give White
+insurance for resulting endgames in case more pieces are traded.} 56... Kd7 57.
+a5 {Guarding the b6-square for some possible attacking variations and getting
+the pawn closer to promotion. These kinds of moves that gradually yet steadily
+improve your already better position are especially difficult to play against.}
+57... Qd5 (57... Qxa5 $4 {[%c_effect a5;square;a5;type;Blunder;persistent;true]
+The black queen has to guard the c6-square or else:} 58. Rb7+ Kc8 59. Qc6+ Kd8
+60. Rb8+ Ke7 61. Re8+ Kf7 62. Qe6+ Kg7 63. Rg8+ Kh7 64. Qg6#) 58. Qg4+ Kd6 59.
+a6 {The pawns slow yet significant steps down the board give Black one more
+worry in this challenging position.} 59... c3 60. Rb6+ Ke5 61. Qg5+ Ke4 62. Qe7+
+Qe5 63. Qh4+ ({If} 63. Re6 $4 {[%c_effect
+e6;square;e6;type;Blunder;persistent;true]} 63... Rd1# {A reminder to always
+look out for your opponent's ideas, even when you are hunting their king around
+the center of the board.}) 63... Kf5 64. Qg4# {The wayward black king finally
+meets its end.} 1-0

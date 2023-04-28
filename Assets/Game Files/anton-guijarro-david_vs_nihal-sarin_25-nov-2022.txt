@@ -1,0 +1,47 @@
+[Event "FIDE World Team Championship Playoffs 2"]
+[Site "http://www.Chess.com"]
+[Date "2022.11.25"]
+[Round "6"]
+[White "Anton Guijarro, David"]
+[Black "Nihal, Sarin"]
+[Result "0-1"]
+[ECO "C77"]
+[WhiteElo "2633"]
+[BlackElo "2616"]
+[Annotator "cahan"]
+[PlyCount "114"]
+[EventDate "2022.??.??"]
+
+{[%evp 0,114,21,16,26,17,17,19,17,-10,6,9,14,17,19,10,11,6,22,18,22,28,21,26,
+15,21,23,20,16,21,27,50,40,40,31,39,37,-27,-19,-10,-9,-5,1,-15,-3,-15,-7,0,-6,
+0,0,-10,-3,0,-19,-13,-13,-58,-5,0,0,0,23,0,0,-8,-4,-25,-24,-138,-146,-130,-109,
+-139,-163,-153,-168,-180,-183,-192,-195,-233,-212,-254,-235,-244,-144,-130,
+-138,-238,-251,-334,-347,-339,-334,-370,-369,-384,-397,-399,-395,-399,-404,
+-405,-405,-405,-403,-405,-405,-405,-413,-424,-433,-527,-537,-537,-537]} 1. e4 e5
+2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. d3 Bc5 6. Nc3 d6 7. Bxc6+ bxc6 8. Be3 Bxe3 9.
+fxe3 O-O 10. O-O c5 11. b3 Be6 12. Qe1 Nd7 13. Rd1 Qe7 14. Qg3 h6 15. d4 cxd4
+16. exd4 exd4 17. Nxd4 Ne5 18. h4 c6 19. Nf5 Bxf5 20. exf5 f6 21. Ne2 d5 22. Nf4
+Rf7 23. Rfe1 Re8 24. Ne6 Qa3 25. Qc3 Qd6 {This far, the game is about even
+although I must admit that I find White's position somewhat more appealing.} 26.
+Qd4 $6 {[%c_effect d4;square;d4;type;Inaccuracy;persistent;true]} (26. h5 Ng4 27.
+g3 {would have been equal according to my engine.}) 26... h5 27. Qf4 Qa3 28. Qd4
+Rfe7 29. c4 Ng4 30. cxd5 cxd5 31. Qxd5 Qxa2 32. Rd2 $6 {[%c_effect
+d2;square;d2;type;Inaccuracy;persistent;true]} ({Or} 32. Ng5+ Kh8 33. Rxe7 Qf2+
+34. Kh1 Qxh4+ 35. Kg1 Qh2+ 36. Kf1 Qh1+ 37. Ke2 Rxe7+ 38. Ne6 Qh2 {which somehow
+is a draw but who can see this in a rapid game $2}) 32... Qa3 33. Rd4 $6
+{[%c_effect d4;square;d4;type;Inaccuracy;persistent;true]} 33... Kh8 {Finally,
+the king gets away from potential discovered checks.} 34. Rxg4 $4 {[%c_effect
+g4;square;g4;type;Blunder;persistent;true] Frustrated with the annoying,
+untouchable knight on g4, White makes a radical, but ultimately terrible
+decision.} ({A better choice was} 34. g3 Qb2 35. Rd2 Qc3 36. Qd3 Qc6 {when Black
+would have a clear advantage.}) 34... hxg4 35. Kh2 Qb4 {Black is winning.} 36.
+Re4 Qb8+ 37. g3 Qb7 38. Qxb7 Rxb7 39. Rxg4 Rxb3 40. h5 Rb5 41. Nxg7 Rg8 42. h6
+Rxf5 $4 {[%c_effect f5;square;f5;type;Blunder;persistent;true]} (42... Kh7 $1
+{[%c_effect h7;square;h7;type;GreatFind;persistent;true] wins for Black.}) 43.
+Ra4 Rf2+ 44. Kh3 $4 {[%c_effect h3;square;h3;type;Blunder;persistent;true]}
+({White may have been able to survive after the less than obvious} 44. Kg1 Rd2
+45. Rxa6 Rf8 46. Re6 {and it is difficult for Black to make progress.}) 44...
+Kh7 45. Rxa6 Kxh6 {Now, there are no problems left for Black; he just has to
+avoid knight forks.} 46. Ne6 Rf3 47. Nd4 Rfxg3+ 48. Kh2 Rg2+ 49. Kh3 R8g3+ 50.
+Kh4 Rg4+ 51. Kh3 R4g3+ 52. Kh4 Kg6 53. Ne6 Rg4+ 54. Kh3 R2g3+ 55. Kh2 Re3 56.
+Nf8+ Kf7 57. Nd7 Rd4 0-1

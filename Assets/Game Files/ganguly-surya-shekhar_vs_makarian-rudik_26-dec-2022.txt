@@ -1,0 +1,34 @@
+[Event "FIDE World Rapid Chess Championship 2022"]
+[Site "Chess.com"]
+[Date "2022.12.26"]
+[Round "01"]
+[White "Ganguly, Surya Shekhar"]
+[Black "Makarian, Rudik"]
+[Result "1-0"]
+[WhiteElo "2582"]
+[BlackElo "2554"]
+[TimeControl "900+10"]
+
+1. e4 c5 2. c3 Nf6 3. e5 Nd5 4. Nf3 e6 5. d4 cxd4 6. cxd4 d6 7. Bc4 Nc6 8. O-O
+Be7 9. Qe2 O-O 10. Nc3 Nxc3 11. bxc3 dxe5 12. dxe5 Qc7 13. Bd3 b6 {Positions
+governed by a pawn lodged on e5 always cause discomfort for Black.  Though a
+cautionary tale for White: should Black find a way to liquidate, the isolated
+pawns on c3 and a3 will become sitting ducks.} 14. Re1 Bb7 15. Ng5 {The
+beginning of the fun. Black must be accurate in his defense.} 15... g6 $2
+{[%c_effect g6;square;g6;type;Mistake;persistent;true] Allowing Ganguly to
+commence the bloodbath.} (15... Bxg5 {The only move that keeps Black in the
+game.} 16. Bxg5 {Surrending the bishop pair is necessary here for Black, who has
+sufficient defensive resources around the king after} 16... Ne7 17. Qh5 Ng6 18.
+Re3 Qxc3 19. Rd1 Qc6 {Dicey but Stockfish claims equality.}) 16. Nxh7 $3
+{[%c_effect h7;square;h7;type;Brilliant;persistent;true] Boom $1 Ganguly crashes
+through.} 16... Kxh7 17. Qh5+ $1 {[%c_effect
+h5;square;h5;type;GreatFind;persistent;true]} 17... Kg8 18. Bxg6 $1 {[%c_effect
+g6;square;g6;type;GreatFind;persistent;true]} 18... fxg6 19. Qxg6+ {Absolutely
+merciless from White.} 19... Kh8 20. Qh6+ Kg8 21. Re3 {This rook lift is so
+simple yet so elegant. Black has very few ways to defend.} 21... Bh4 {The best
+move obviously preventing Rg3+.} 22. Qxh4 Rf7 23. Rg3+ Rg7 24. Bg5 Rf8 $2
+{[%c_effect f8;square;f8;type;Mistake;persistent;true]} (24... Rg6 {Giving
+Black's pieces more space.}) 25. Bf6 Rxf6 26. exf6 Rxg3 27. fxg3 (27. Qxg3+
+{White is still winning this endgame but swapping the queens is suboptimal as
+White's attack will end.}) 27... Qh7 28. Qf4 Qg6 29. Rd1 Bc8 30. Qc7 {The nail
+in the coffin. Black's pieces are simply uncoordinated.} 1-0

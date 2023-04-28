@@ -1,0 +1,99 @@
+[Event "85th Tata Steel Masters 2023"]
+[Site "Wijk aan Zee"]
+[Date "2023.01.17"]
+[Round "5.5"]
+[White "Aronian, L."]
+[Black "Keymer, V."]
+[Result "1-0"]
+[ECO "C84"]
+[WhiteElo "2735"]
+[BlackElo "2696"]
+[Annotator "Petrisor Adrian"]
+[PlyCount "157"]
+[EventDate "2023.01.10"]
+[EventType "tourn"]
+[EventCountry "NED"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 {The Ruy Lopez: White finishes the development of the
+kingside pieces and gets ready to castle short. The critical idea behind 3.Bb5,
+however, is to attack Black's c6-knight. Also called the Spanish Opening or
+Spanish Game, this opening is named after 16th-century Spanish priest Ruy Lopez
+de Segura. It is one of the most popular openings with many variations.} 3... a6
+4. Ba4 Nf6 5. O-O Be7 6. d3 b5 7. Bb3 d6 8. c3 {Of course, absolutely the main
+line until here. White wants to transfer the knight from b1 to g3 via d2 and f1
+later and also to play d4 in the center.} 8... O-O 9. Bc2 $5 {[%c_effect
+c2;square;c2;type;Interesting;persistent;true] The idea is to play d4, and e4
+now is protected. Also now Na5 doesn't make any sense because the bishop is no
+longer on b3.} 9... Re8 {For Black, the most solid setup is to play Bf8 and
+possibly after that g6 and Bg7. At the same time, the e5-pawn will be protected,
+so d5 can also be possible.} 10. Re1 h6 11. Nbd2 Bf8 (11... d5 {can be another
+alternative by Black to be the first in the center.} 12. exd5 Qxd5 13. Ne4 Bf5 $12
+{without problems for Black.}) 12. d4 {Now White is the first in the center, but
+still Black is so solid and shouldn`t have a big problem.} 12... Bb7 13. d5 Nb8
+{After Nb8, Black usually wants to break the center with c6, and the knight will
+be placed via d7 on c5, most probably to attack the e4-pawn, but also from the
+e6-square it could come to the kingside, like f4 in the future.} 14. b3 Nbd7 15.
+c4 {Consolidate the d5-pawn because Black will play c6 soon.} 15... c6 16. Nf1
+a5 {Put the knight on c5 and don`t allow b4 by White. Also, play a4 later to put
+pressure on the white pawns.} 17. Be3 a4 18. h3 {Stop Ng4 from happening and
+keep the bishop on e3.} 18... axb3 19. axb3 Rxa1 20. Qxa1 Qc7 {Threatening cxd5
+and preparing Ra8 to control the only open file.} 21. Rc1 Ra8 22. Qb2 Qa5
+{Stopping Ra1 and Black's position looks pretty good.} 23. Ng3 b4 24. Ne1 Nc5 $5
+{[%c_effect c5;square;c5;type;Interesting;persistent;true]} (24... c5 {probably
+is just a drawish position without any risk for Black, but Keymer wants more.})
+25. Rd1 Nfd7 $6 {[%c_effect d7;square;d7;type;Inaccuracy;persistent;true]} (25...
+h5 $1 {[%c_effect h5;square;h5;type;GreatFind;persistent;true] another idea for
+Black, play g6 and then h4 followed by Nh5.} 26. Bg5 Nh7 27. Be3 Nf6 $12) 26. Nf5
+cxd5 27. exd5 $14 Bc8 28. Bd2 Nf6 29. Ng3 Be7 $6 {[%c_effect
+e7;square;e7;type;Inaccuracy;persistent;true]} (29... g6 {is best for Black with
+the idea to push h5-h4, but also to put the bishop on g7 which looks good for
+Black.}) 30. Nd3 Nxd3 31. Bxd3 Bd7 $2 {[%c_effect
+d7;square;d7;type;Mistake;persistent;true]} (31... Nd7 $1 {[%c_effect
+d7;square;d7;type;GreatFind;persistent;true] Black should relocate the knight to
+c5.} 32. Be3 Qa2 33. Qxa2 Rxa2 34. Bd2 Nc5 35. Bxb4 Nxd3 36. Rxd3 Ra1+ 37. Kh2
+f5 $13 /=) 32. Bf5 Be8 $6 $16 {[%c_effect
+e8;square;e8;type;Inaccuracy;persistent;true]} (32... g6 $1 {[%c_effect
+g6;square;g6;type;GreatFind;persistent;true]} 33. Bxd7 Nxd7 34. Bxh6 Qa2 35.
+Qxa2 Rxa2 36. Bd2 Rb2 37. Bxb4 Rxb3 $13 /= {with enough compensation for the
+pawn.}) 33. Bb1 Bd7 34. f4 $2 {[%c_effect
+f4;square;f4;type;Mistake;persistent;true] White decided to open up the
+position.} 34... Re8 $6 {[%c_effect
+e8;square;e8;type;Inaccuracy;persistent;true]} (34... Qa3 $1 {[%c_effect
+a3;square;a3;type;GreatFind;persistent;true]} 35. Qc2 Ba4 $1 {[%c_effect
+a4;square;a4;type;GreatFind;persistent;true] This beautiful move saves Black's
+position.} 36. bxa4 Qxg3 $12) 35. Rf1 Bd8 $2 {[%c_effect
+d8;square;d8;type;Mistake;persistent;true]} (35... e4 $5 {[%c_effect
+e4;square;e4;type;Interesting;persistent;true]} 36. Qd4 Bd8 37. Be3 $16) 36. fxe5
+$16 Qc5+ 37. Kh2 Rxe5 $2 {[%c_effect e5;square;e5;type;Mistake;persistent;true]}
+(37... dxe5 $1 {[%c_effect e5;square;e5;type;GreatFind;persistent;true] is much
+better, but still the position is worse.} 38. Bf5 e4 39. Bxd7 Nxd7 40. Nf5 Bf6
+41. Qc1 $16) 38. Bf4 $18 {Now White has a decisive advantage.} 38... Re8 39. Qd2 $6
+{[%c_effect d2;square;d2;type;Inaccuracy;persistent;true]} (39. Qc2 $1 $18
+{[%c_effect c2;square;c2;type;GreatFind;persistent;true]} 39... Bb6 40. Qd1
+{with the idea of Qf3 and Black's position looks so dangerous.}) 39... h5 40.
+Bg5 $1 {[%c_effect g5;square;g5;type;GreatFind;persistent;true] Absolutely logical
+after h5, now the g5-square is just nice for the bishop.} 40... h4 {The only try
+for Keymer with the idea to exchange queens after Bxh4 with Qe3, but the endgame
+should be lost anyway.} 41. Bxh4 Qe3 42. Qxe3 Rxe3 43. Rf3 Rxf3 44. gxf3 {This
+endgame should be just lost for Black because there is no compensation anymore
+for the pawn.} 44... Be7 45. Bf5 $1 {[%c_effect
+f5;square;f5;type;GreatFind;persistent;true]} 45... Be8 46. Bxf6 $4 {[%c_effect
+f6;square;f6;type;Blunder;persistent;true] White just missed a clear way to win
+here.} (46. Ne4 $1 {[%c_effect e4;square;e4;type;GreatFind;persistent;true] This
+is the winning move for White.} 46... Nxd5 (46... Nxe4 47. Bxe7 Nd2 48. Bxd6
+Nxf3+ 49. Kg3 Nd4 50. Bd3 {followed up by Bxb4 with a clear winning position.})
+47. Bxe7 Nxe7 48. Nxd6 $18) 46... Bxf6 47. f4 g6 48. Ne4 Be7 49. Bc8 f5 $1
+{[%c_effect f5;square;f5;type;GreatFind;persistent;true] Great defense.} 50. Nf2
+{In the next moves, White tries to improve his position, but the objective
+should be a draw. Of course, we are humans, not computers, and also time trouble
+was a problem for Keymer in the next moves.} 50... Bd8 51. Nd3 Ba5 52. Kg3 Kg7
+53. Kf3 Kf6 54. Be6 Ke7 55. Ke2 Kf6 56. Bc8 Ke7 57. Ba6 Bf7 58. Bb5 Kf6 59. h4
+Ke7 60. Kf3 Kf6 61. Nf2 Bb6 62. Nh3 Bd4 63. Ng5 Ke7 64. Ba6 Bb6 65. Bc8 Be8 $2 $18
+{[%c_effect e8;square;e8;type;Mistake;persistent;true] The decisive mistake in
+this endgame.} (65... Kf6 $1 $12 {[%c_effect
+f6;square;f6;type;GreatFind;persistent;true] Just protect f5, and now h5 is no
+longer possible.}) 66. h5 $1 {[%c_effect
+h5;square;h5;type;GreatFind;persistent;true]} 66... gxh5 67. Bxf5 Bd4 68. Ne4
+Bf7 69. Bh7 Be8 70. Kg3 Bf7 71. Kh3 Be8 72. f5 Bb2 73. Bg6 Bd7 74. Kh4 Bd4 75.
+Kxh5 {with two pawns up, the game is over.} 75... Bc8 76. Kg5 Be3+ 77. Kg4 Bd4
+78. Bh7 Bf6 79. Bg8 {Keymer resigns. Good technique by Aronian $1} 1-0

@@ -1,0 +1,28 @@
+[Event "Vugar Gashimov Memorial 2022"]
+[Site "Chess.com"]
+[Date "2022.12.18"]
+[Round "03"]
+[White "Abdusattorov, Nodirbek"]
+[Black "Mamedyarov, Shakhriyar"]
+[Result "1-0"]
+[WhiteElo "2713"]
+[BlackElo "2740"]
+[TimeControl "900+10"]
+
+1. c4 Nf6 2. Nc3 e5 3. Nf3 Nc6 4. g3 d5 5. cxd5 Nxd5 6. Bg2 Bc5 7. O-O O-O 8. d3
+Nf6 9. Bd2 Re8 10. Rc1 Bf8 11. a3 h6 12. b4 Nd4 13. Nxd4 exd4 {The fianchettoed
+white bishop is loaded with dynamic potential as it eyes the black pieces on the
+other side of the long diagonal.} 14. Ne4 c6 {Trying to set up a roadblock
+against the g2-bishop.} 15. Nc5 Nd5 16. Nb3 Qf6 17. Re1 Be6 18. Nc5 Re7 19. Nxe6
+{Gaining the bishop pair.} 19... Rxe6 20. Bf3 Rae8 21. Qb3 Nb6 22. b5 {The
+b-pawn helps reopen the a8-h1 diagonal so the light-squared bishop can create
+pressure down it.} 22... c5 23. Bg4 Re5 24. Bf4 Rd5 25. a4 g5 26. Bc7
+{Interestingly, the d5-rook now finds itself loose and with no safe squares to
+run to or new defenders that can take over for the b6-knight. Mamedyarov has to
+give up a pawn to prevent the loss of more material.} 26... c4 27. dxc4 Rc5 28.
+Bxb6 axb6 29. Bf3 Rc7 30. Bd5 Bc5 31. Qf3 Kg7 32. Qxf6+ Kxf6 33. Bf3 {Though
+Abdusattorov is ahead a pawn, opposite-color bishop and rook endings are some of
+the hard kinds to convert.} 33... Kg6 34. g4 Ra8 35. Ra1 Kf6 36. Red1 Ke5 37.
+Rd3 Ra7 38. Bd5 Kf6 39. Rf3+ Kg7 40. Rf5 Re7 41. Ra2 Ra8 42. Bf3 Rd8 43. a5 d3
+44. exd3 {and Black resigned.} (44. exd3 Rxd3 45. a6 bxa6 46. bxa6 Ra7 {when
+Black's rook has to resort to passive defense to stop the passed a-pawn.}) 1-0
