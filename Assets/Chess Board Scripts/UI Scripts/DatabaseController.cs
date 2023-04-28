@@ -9,13 +9,39 @@ public class DatabaseController : MonoBehaviour
     public TextAsset[] gamesTextFiles;
     public TextMeshPro annotationText;
 
+    public GameObject variationPanelPrefab;
+    public Transform panelLocation;
+    public GameObject variationButtonPrefab;
+
     private Database database;
     private PGNProcessor processor;
     private bool isReady;
 
     private GameIterator iterator;
     private TextController textController;
-    
+
+    private GameObject currentPanel;
+
+    private static DatabaseController _instance;
+
+    public static DatabaseController Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<DatabaseController>();
+            }
+
+            return _instance;
+        }
+    }
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         database = new Database();
@@ -116,13 +142,14 @@ public class DatabaseController : MonoBehaviour
     public void NextMove()
     {
         if (isReady) return;
-        iterator.NextMove();
+        Move startMove = iterator.GetCurrentMove();
+        Move endMove = iterator.NextMove();
         textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
-        MoveReaderController.Instance.PlayMove(iterator.GetCurrentMove().GetMove());
-        if (iterator.GetCurrentMove().GetVariations().Count > 0)
+        if (!startMove.Equals(endMove))
         {
-            ShowVariations();
+            MoveReaderController.Instance.PlayMove(iterator.GetCurrentMove().GetMove());
         }
+        CheckVariations();
     }
     public void PreviousMove()
     {
@@ -130,34 +157,74 @@ public class DatabaseController : MonoBehaviour
         iterator.PreviousMove();
         textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
         BoardManager.Instance.UndoMove();
-        if (iterator.GetCurrentMove().GetVariations().Count > 0)
-        {
-            ShowVariations();
-        }
+        CheckVariations();
     }
     public void ReturnMove()
     {
         if (isReady) return;
-        int returnCount = iterator.ReturnLine();
+        Move startMove = iterator.GetCurrentMove();
+        Move endMove = iterator.ReturnLine();
+        int steps = CalculateReturn(endMove, startMove);
         textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
-        for (int i = 0; i < returnCount; i++)
+        for (int i = 0; i < steps; i++)
         {
             BoardManager.Instance.UndoMove();
         }
-        if (iterator.GetCurrentMove().GetVariations().Count > 0)
+        CheckVariations();
+    }
+    private int CalculateReturn(Move returnedPosition, Move startPosition)
+    {
+        int steps = (startPosition.GetMoveNumber() - returnedPosition.GetMoveNumber()) * 2;
+        if (returnedPosition.GetIsWhite() && !startPosition.GetIsWhite())
+        {
+            steps++;
+        }
+        else if (!returnedPosition.GetIsWhite() && startPosition.GetIsWhite())
+        {
+            steps--;
+        }
+        return steps;
+    }
+    private void CheckVariations()
+    {
+        if (currentPanel != null)
+        {
+            Destroy(currentPanel);
+        }
+        if (iterator.GetCurrentMove().GetNextMove() != null &&
+            iterator.GetCurrentMove().GetNextMove().GetVariations().Count > 0)
         {
             ShowVariations();
         }
     }
     private void ShowVariations()
     {
-
+        Debug.Log("showing variations");
+        currentPanel = Instantiate(variationPanelPrefab);
+        currentPanel.transform.position = panelLocation.position;
+        currentPanel.transform.rotation = panelLocation.rotation;
+        for (int i = 0; i < iterator.GetCurrentMove().GetNextMove().GetVariations().Count; i++)
+        {
+            GameObject button = Instantiate(variationButtonPrefab);
+            button.GetComponent<MoveButtonController>().InitializeMoveButton(i,
+                iterator.GetCurrentMove().GetNextMove().GetVariations()[i].SimpleMove());
+            button.transform.SetParent(currentPanel.transform);
+        }
+    }
+    public void VariationClicked(int index)
+    {
+        if (isReady) return;
+        iterator.NextMove(index);
+        textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
+        MoveReaderController.Instance.PlayMove(iterator.GetCurrentMove().GetMove());
+        CheckVariations();
     }
 
     public void QuitGame()
     {
         if (isReady) return;
         textController.UpdateText(" ");
+        Destroy(currentPanel);
         BoardManager.Instance.ResetBoard();
         isReady = true;
     }

@@ -123,11 +123,11 @@ public class BoardManager : MonoBehaviour
 
     public void UndoMove()
     {
-        if (moveLog.Count > 0)
+        if (HasNextMoveLog())
         {
             index--;
             isWhiteTurn = !isWhiteTurn;
-            while (moveLog.Count > 0 && moveLog.Peek().index == index)
+            while (HasNextMoveLog() && moveLog.Peek().index == index)
             {
                 MoveLog log = moveLog.Pop();
                 if (log.startR != -1)
@@ -150,10 +150,23 @@ public class BoardManager : MonoBehaviour
 
     public void ResetBoard()
     {
-        while (moveLog.Count > 0)
+        while (HasNextMoveLog())
         {
             UndoMove();
         }
+    }
+
+    public bool HasNextMoveLog()
+    {
+        return moveLog.Count > 0;
+    }
+    public MoveLog PeekMoveLog()
+    {
+        if (HasNextMoveLog() )
+        {
+            return moveLog.Peek();
+        }
+        return null;
     }
 
     private void InitializeMaps()

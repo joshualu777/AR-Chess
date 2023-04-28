@@ -63,15 +63,13 @@ public class GameIterator : MonoBehaviour
         }
         return currentMove;
     }
-    public int ReturnLine()
+    public Move ReturnLine()
     {
-        int cnt = 0;
         if (diverge.Count > 0)
         {
             currentMove = diverge.Pop();
-            cnt++;
         }
-        return cnt;
+        return currentMove;
     }
 
     public bool AddMove(Move move)

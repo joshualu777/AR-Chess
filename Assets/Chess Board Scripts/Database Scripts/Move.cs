@@ -106,7 +106,7 @@ public class Move : IComparable<Move>
         }
         return result;
     }
-    private string SimpleMove()
+    public string SimpleMove()
     {
         string printedMove = "" + GetMoveNumber();
         if (isWhite)

@@ -5,13 +5,18 @@ using UnityEngine;
 
 public class MoveButtonController : MonoBehaviour
 {
+    public int index;
     public string moveText;
     public TextMeshPro moveTextPro;
 
-
-    // Update is called once per frame
-    void Update()
+    public void ClickBranch()
     {
-        
+        DatabaseController.Instance.VariationClicked(index);
+    }
+    public void InitializeMoveButton(int index, string move)
+    {
+        this.index = index;
+        moveText = move;
+        moveTextPro.text = moveText;
     }
 }
