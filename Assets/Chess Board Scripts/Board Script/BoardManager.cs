@@ -22,6 +22,9 @@ public class BoardManager : MonoBehaviour
 
     public int selectionR;
     public int selectionC;
+    public bool userMove;
+
+    private int lastUserMove;
 
     private Stack<MoveLog> moveLog;
     private int index;
@@ -53,6 +56,12 @@ public class BoardManager : MonoBehaviour
         powerC = -1;
         //active = new List<GameObject>();
         isWhiteTurn = true;
+
+        selectionR = -1;
+        selectionC = -1;
+        selected = null;
+        userMove = false;
+        lastUserMove = -1;
 
         moveLog = new Stack<MoveLog>();
         index = 0;
@@ -119,6 +128,9 @@ public class BoardManager : MonoBehaviour
 
         SelectChessFigure(startR, startC);
         MoveChessFigure(endR, endC);
+
+        userMove = false;
+        lastUserMove = -1;
     }
 
     public void UndoMove()
@@ -145,6 +157,19 @@ public class BoardManager : MonoBehaviour
                     log.capturedPieceObject.SetActive(true);
                 }
             }
+            if (moveLog.Count == lastUserMove)
+            {
+                userMove = false;
+                lastUserMove = -1;
+                if (moveLog.Count == 0)
+                {
+                    DatabaseController.Instance.DisplayGameInfo();
+                }
+                else
+                {
+                    DatabaseController.Instance.DisplayCurrentAnnotation();
+                }
+            }
         }
     }
 
@@ -154,6 +179,10 @@ public class BoardManager : MonoBehaviour
         {
             UndoMove();
         }
+        selectionR = -1;
+        selectionC = -1;
+        selected = null;
+        userMove = false;
     }
 
     public bool HasNextMoveLog()
@@ -389,7 +418,16 @@ public class BoardManager : MonoBehaviour
                     }
                 }
             }
-
+            userMove = true;
+            if (lastUserMove == -1)
+            {
+                lastUserMove = moveLog.Count;
+            }
+            //fix this
+            if (userMove)
+            {
+                DatabaseController.Instance.DisplayReturnMessage();
+            }
             index++;
         }
 

@@ -12,6 +12,7 @@ public class GameButtonController : MonoBehaviour
 
     public void ClickGame()
     {
+        BoardManager.Instance.ResetBoard();
         if (quality) DatabaseController.Instance.ChooseQualityGame(index);
         else DatabaseController.Instance.ChooseAllGame(index);
     }

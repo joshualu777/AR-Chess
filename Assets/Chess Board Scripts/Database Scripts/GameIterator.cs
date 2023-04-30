@@ -106,4 +106,9 @@ public class GameIterator : MonoBehaviour
         }
         return false;
     }
+
+    public Game GetGame()
+    {
+        return game;
+    }
 }

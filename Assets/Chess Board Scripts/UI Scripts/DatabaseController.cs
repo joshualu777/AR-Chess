@@ -20,7 +20,7 @@ public class DatabaseController : MonoBehaviour
 
     private Database database;
     private PGNProcessor processor;
-    private bool isReady;
+    private bool hasStarted;
 
     private GameIterator iterator;
     private TextController textController;
@@ -51,7 +51,7 @@ public class DatabaseController : MonoBehaviour
     {
         database = new Database();
         processor = new PGNProcessor(database);
-        isReady = true;
+        hasStarted = false;
         textController = annotationText.GetComponent<TextController>();
     }
 
@@ -126,58 +126,82 @@ public class DatabaseController : MonoBehaviour
 
     public void ChooseAllGame(int index)
     {
-        if (!isReady) return;
-        RunGame(database.LoadGame(index, false));
+        if (!hasStarted)
+        {
+            RunGame(database.LoadGame(index, false));
+        }
     }
     public void ChooseQualityGame(int index)
     {
-        if (!isReady) return;
-        RunGame(database.LoadGame(index, true));
+        if (!hasStarted)
+        {
+            RunGame(database.LoadGame(index, true));
+        }
     }
 
     private void RunGame(Game game)
     {
-        if (isReady)
-        {
-            isReady = false;
-            Debug.Log("created iterator");
-            iterator = new GameIterator(game);
-            textController.UpdateText(game.GetFormattedGameInfo());
-        }
+        hasStarted = true;
+        Debug.Log("created iterator");
+        iterator = new GameIterator(game);
+        textController.UpdateText(game.GetFormattedGameInfo());
     }
 
     public void NextMove()
     {
-        if (isReady) return;
-        Move startMove = iterator.GetCurrentMove();
-        Move endMove = iterator.NextMove();
-        textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
-        if (!startMove.Equals(endMove))
+        if (hasStarted && !IsUserMove())
         {
-            MoveReaderController.Instance.PlayMove(iterator.GetCurrentMove().GetMove());
+            Move startMove = iterator.GetCurrentMove();
+            Move endMove = iterator.NextMove();
+            textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
+            if (!startMove.Equals(endMove))
+            {
+                MoveReaderController.Instance.PlayMove(iterator.GetCurrentMove().GetMove());
+            }
+            CheckVariations();
         }
-        CheckVariations();
     }
     public void PreviousMove()
     {
-        if (isReady) return;
-        iterator.PreviousMove();
-        textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
-        BoardManager.Instance.UndoMove();
-        CheckVariations();
-    }
-    public void ReturnMove()
-    {
-        if (isReady) return;
-        Move startMove = iterator.GetCurrentMove();
-        Move endMove = iterator.ReturnLine();
-        int steps = CalculateReturn(endMove, startMove);
-        textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
-        for (int i = 0; i < steps; i++)
+        if (IsUserMove())
         {
             BoardManager.Instance.UndoMove();
         }
-        CheckVariations();
+        else
+        {
+            if (hasStarted)
+            {
+                iterator.PreviousMove();
+                textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
+                BoardManager.Instance.UndoMove();
+                CheckVariations();
+            }
+        }
+    }
+    public void ReturnMove()
+    {
+        if (IsUserMove())
+        {
+            while (IsUserMove())
+            {
+                BoardManager.Instance.UndoMove();
+            }
+        }
+        else
+        {
+            if (hasStarted)
+            {
+                Move startMove = iterator.GetCurrentMove();
+                Move endMove = iterator.ReturnLine();
+                int steps = CalculateReturn(endMove, startMove);
+                textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
+                for (int i = 0; i < steps; i++)
+                {
+                    BoardManager.Instance.UndoMove();
+                }
+                CheckVariations();
+            }
+        }
     }
     private int CalculateReturn(Move returnedPosition, Move startPosition)
     {
@@ -220,19 +244,46 @@ public class DatabaseController : MonoBehaviour
     }
     public void VariationClicked(int index)
     {
-        if (isReady) return;
-        iterator.NextMove(index);
+        if (hasStarted && !IsUserMove())
+        {
+            iterator.NextMove(index);
+            textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
+            MoveReaderController.Instance.PlayMove(iterator.GetCurrentMove().GetMove());
+            CheckVariations();
+        }
+    }
+
+    private bool IsUserMove()
+    {
+        if (hasStarted && BoardManager.Instance.userMove)
+        {
+            DisplayReturnMessage();
+            return true;
+        }
+        return false;
+    }
+
+    public void DisplayCurrentAnnotation()
+    {
         textController.UpdateText(iterator.GetCurrentMove().GetFormattedMove());
-        MoveReaderController.Instance.PlayMove(iterator.GetCurrentMove().GetMove());
-        CheckVariations();
+    }
+    public void DisplayGameInfo()
+    {
+        textController.UpdateText(iterator.GetGame().GetFormattedGameInfo());
+    }
+    public void DisplayReturnMessage()
+    {
+        textController.UpdateText("Return to main line to continue analyzing");
     }
 
     public void QuitGame()
     {
-        if (isReady) return;
-        textController.UpdateText(" ");
-        Destroy(currentPanel);
-        BoardManager.Instance.ResetBoard();
-        isReady = true;
+        if (hasStarted)
+        {
+            textController.UpdateText(" ");
+            Destroy(currentPanel);
+            BoardManager.Instance.ResetBoard();
+            hasStarted = false;
+        }
     }
 }
