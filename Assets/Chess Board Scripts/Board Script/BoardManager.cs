@@ -127,10 +127,7 @@ public class BoardManager : MonoBehaviour
         selected = null;
 
         SelectChessFigure(startR, startC);
-        MoveChessFigure(endR, endC);
-
-        userMove = false;
-        lastUserMove = -1;
+        MoveChessFigure(endR, endC, true);
     }
 
     public void UndoMove()
@@ -161,13 +158,16 @@ public class BoardManager : MonoBehaviour
             {
                 userMove = false;
                 lastUserMove = -1;
-                if (moveLog.Count == 0)
+                if (DatabaseController.Instance.GetHasStarted())
                 {
-                    DatabaseController.Instance.DisplayGameInfo();
-                }
-                else
-                {
-                    DatabaseController.Instance.DisplayCurrentAnnotation();
+                    if (moveLog.Count == 0)
+                    {
+                        DatabaseController.Instance.DisplayGameInfo();
+                    }
+                    else
+                    {
+                        DatabaseController.Instance.DisplayCurrentAnnotation();
+                    }
                 }
             }
         }
@@ -340,10 +340,16 @@ public class BoardManager : MonoBehaviour
         BoardHighlighting.Instance.HighlightAllowedMoves(legalMoves);
     }
 
-    private void MoveChessFigure(int r, int c)
+    private void MoveChessFigure(int r, int c, bool manual = false)
     {
         if (legalMoves[r, c])
         {
+            userMove = true;
+            if (lastUserMove == -1)
+            {
+                lastUserMove = moveLog.Count;
+            }
+
             //checks for castle
             if (selected.pieceType == PieceType.King && 
                 Mathf.Abs(c - selected.CurrentC) == 2)
@@ -418,16 +424,20 @@ public class BoardManager : MonoBehaviour
                     }
                 }
             }
-            userMove = true;
-            if (lastUserMove == -1)
+
+            if (manual)
             {
-                lastUserMove = moveLog.Count;
+                userMove = false;
+                lastUserMove = -1;
             }
-            //fix this
-            if (userMove)
+            else
             {
-                DatabaseController.Instance.DisplayReturnMessage();
+                if (DatabaseController.Instance.GetHasStarted())
+                {
+                    DatabaseController.Instance.DisplayReturnMessage();
+                }
             }
+
             index++;
         }
 

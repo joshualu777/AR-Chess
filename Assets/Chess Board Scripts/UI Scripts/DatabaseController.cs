@@ -70,7 +70,8 @@ public class DatabaseController : MonoBehaviour
             }
             processor.ProcessGame(gamePGN);
         }
-        textController.UpdateText("All files have been processed");
+        //textController.UpdateText("All files have been processed");
+        DisplayAllGames();
     }
 
     public void SortAdded()
@@ -285,5 +286,10 @@ public class DatabaseController : MonoBehaviour
             BoardManager.Instance.ResetBoard();
             hasStarted = false;
         }
+    }
+
+    public bool GetHasStarted()
+    {
+        return hasStarted;
     }
 }

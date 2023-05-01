@@ -12,9 +12,12 @@ public class GameButtonController : MonoBehaviour
 
     public void ClickGame()
     {
-        BoardManager.Instance.ResetBoard();
-        if (quality) DatabaseController.Instance.ChooseQualityGame(index);
-        else DatabaseController.Instance.ChooseAllGame(index);
+        if (!DatabaseController.Instance.GetHasStarted())
+        {
+            BoardManager.Instance.ResetBoard();
+            if (quality) DatabaseController.Instance.ChooseQualityGame(index);
+            else DatabaseController.Instance.ChooseAllGame(index);
+        }
     }
     public void InitializeMoveButton(int index, bool quality, string game)
     {
