@@ -36,7 +36,7 @@ Microsoft's Mixed Reality Toolkit was used for this project. Below are the docum
 6. https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/interactable?view=mrtkunity-2022-05
 7. https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/ux-building-blocks/scrolling-object-collection?view=mrtkunity-2022-05
 
-Code written by Marcel Jurtz was also used in this project, namely:
+Code written by Marcel Jurtz was also used in this project, namely for:
 1. BoardHighlighting script
 2. BoardManager script
 3. Chess piece scripts
