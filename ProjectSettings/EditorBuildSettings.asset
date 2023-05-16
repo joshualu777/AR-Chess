@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MR Chess.unity
+    guid: 582d582f230affe46ad1ea1c6c7ea323
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 4c39f80105162af43aa3adc9ac82b5e3, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b071fc0e28c20ef4fb68f65e0b607514, type: 2}
